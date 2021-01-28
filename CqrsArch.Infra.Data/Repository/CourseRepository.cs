@@ -17,6 +17,12 @@ namespace CqrsArch.Infra.Data.Repository
             _ctx = context;
         }
 
+        public void Add(Course course)
+        {
+            _ctx.Courses.Add(course);
+            _ctx.SaveChanges();
+        }
+
         public IEnumerable<Course> GetCourses()
         {
            return _ctx.Courses;

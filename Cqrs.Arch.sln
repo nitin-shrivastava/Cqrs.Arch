@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cqrs.Arch.WebApi", "Cqrs.Ar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cqrs.Arch.Infra.ServiceBus", "Cqrs.Arch.Infra.ServiceBus\Cqrs.Arch.Infra.ServiceBus.csproj", "{39094E03-9802-445D-8571-9E73E9A7C94C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cqrs.Arch.Domain.Core", "Cqrs.Arch.Domain.Core\Cqrs.Arch.Domain.Core.csproj", "{18E4C3DC-15DD-469D-AA31-6403277E5672}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{39094E03-9802-445D-8571-9E73E9A7C94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{39094E03-9802-445D-8571-9E73E9A7C94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{39094E03-9802-445D-8571-9E73E9A7C94C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +83,7 @@ Global
 		{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E} = {A1A0D103-C46F-4B24-9547-A614DBE5E598}
 		{639151C3-2840-474D-9ED1-AA51AE3185D8} = {2330CA9F-51EF-4CD1-9912-E9EF87E37E64}
 		{39094E03-9802-445D-8571-9E73E9A7C94C} = {8DF9C2D3-F42C-4075-9B7B-D9E14B107867}
+		{18E4C3DC-15DD-469D-AA31-6403277E5672} = {2462465E-645F-46DF-9BB2-41D0F52CD924}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CC494CE-05EF-4F9D-866B-1791FD83A3EC}
