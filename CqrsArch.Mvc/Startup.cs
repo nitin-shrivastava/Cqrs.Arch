@@ -1,4 +1,5 @@
 using CqrsArch.Infra.Data.Context;
+using CqrsArch.Infra.IoC;
 using CqrsArch.Mvc.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,6 +33,7 @@ namespace CqrsArch.Mvc
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+            RegisterServices(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -63,6 +65,10 @@ namespace CqrsArch.Mvc
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+        }
+        private static void RegisterServices(IServiceCollection services)
+        {
+            DependencyBootstraper.RegisterServices(services);
         }
     }
 }

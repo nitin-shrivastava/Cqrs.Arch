@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CqrsArch.Infra.Data\CqrsArch.Infra.Data.csproj" />
+    <ProjectReference Include="..\CqrsArch.Infra.IoC\CqrsArch.Infra.IoC.csproj" />
   </ItemGroup>
 
 </Project>
