@@ -1,8 +1,11 @@
-﻿using Cqrs.Arch.Domain.Core.Bus;
+﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Cqrs.Arch.Domain.Core.Bus;
 using CqrsArch.Application.Interfaces;
 using CqrsArch.Application.ViewModel;
 using CqrsArch.Domain.Commands;
 using CqrsArch.Domain.Interfaces;
+using System.Collections.Generic;
 
 namespace CqrsArch.Application.Services
 {
@@ -10,28 +13,22 @@ namespace CqrsArch.Application.Services
     {
         private readonly ICourseRepository _courseRepository;
         private readonly IMediatorHandler _bus;
-        public CourseService(ICourseRepository courseRepository, IMediatorHandler bus)
+        private readonly IMapper _autoMapper;
+        public CourseService(ICourseRepository courseRepository, IMediatorHandler bus, IMapper mapper)
         {
             _courseRepository = courseRepository;
             _bus = bus;
+            _autoMapper = mapper;
         }
 
         public void Create(CourseViewModel courseViewModel)
         {
-            var createCourseCommand = new CreateCourseCommand(
-                courseViewModel.Name,
-                courseViewModel.Description,
-                courseViewModel.ImageUrl
-                );
-            _bus.SendCommand(createCourseCommand);
+            _bus.SendCommand(_autoMapper.Map<CreateCourseCommand>(courseViewModel));
         }
 
-        public CourseViewModel GetCourses()
+        public IEnumerable<CourseViewModel> GetCourses()
         {
-            return new CourseViewModel
-            {
-                Courses = _courseRepository.GetCourses()
-            };
+            return _courseRepository.GetCourses().ProjectTo<CourseViewModel>(_autoMapper.ConfigurationProvider);
         }
     }
 }

@@ -1,5 +1,6 @@
 using CqrsArch.Infra.Data.Context;
 using CqrsArch.Infra.IoC;
+using CqrsArch.Mvc.Configurations;
 using CqrsArch.Mvc.Data;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -36,6 +37,7 @@ namespace CqrsArch.Mvc
             services.AddRazorPages();
             services.AddMediatR(typeof(Startup));
             RegisterServices(services);
+            services.RegisterAutoMapper();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
