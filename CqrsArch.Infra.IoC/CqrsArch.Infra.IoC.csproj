@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cqrs.Arch.Infra.ServiceBus\Cqrs.Arch.Infra.ServiceBus.csproj" />
     <ProjectReference Include="..\CqrsArch.Application\CqrsArch.Application.csproj" />
     <ProjectReference Include="..\CqrsArch.Infra.Data\CqrsArch.Infra.Data.csproj" />
   </ItemGroup>
