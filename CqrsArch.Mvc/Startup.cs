@@ -27,7 +27,7 @@ namespace CqrsArch.Mvc
                 options.UseSqlServer(
                     Configuration.GetConnectionString("UniversityIdentityDbConnection")));
             services.AddDbContext<UniversityDBContext>(options =>
-    options.UseSqlServer(Configuration.GetConnectionString("UniversityDbConnection")));
+                 options.UseSqlServer(Configuration.GetConnectionString("UniversityDbConnection")));
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -42,7 +42,6 @@ namespace CqrsArch.Mvc
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
             }
             else
             {
