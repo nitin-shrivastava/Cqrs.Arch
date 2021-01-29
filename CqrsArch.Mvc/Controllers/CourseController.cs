@@ -15,8 +15,7 @@ namespace CqrsArch.Mvc.Controllers
         }
         public IActionResult Index()
         {
-            CourseViewModel model = _courseService.GetCourses();
-            return View(model);
+            return View(_courseService.GetCourses());
         }
     }
 }

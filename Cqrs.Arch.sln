@@ -19,9 +19,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsArch.Domain", "CqrsArch
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsArch.Infra.Data", "CqrsArch.Infra.Data\CqrsArch.Infra.Data.csproj", "{FADA54A6-C051-48F3-9908-FEE106A32EB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsArch.Application", "CqrsArch.Application\CqrsArch.Application.csproj", "{D9106D2C-6FE3-4E37-A4D1-B7843F520A6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsArch.Application", "CqrsArch.Application\CqrsArch.Application.csproj", "{D9106D2C-6FE3-4E37-A4D1-B7843F520A6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CqrsArch.Infra.IoC", "CqrsArch.Infra.IoC\CqrsArch.Infra.IoC.csproj", "{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CqrsArch.Infra.IoC", "CqrsArch.Infra.IoC\CqrsArch.Infra.IoC.csproj", "{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceBus", "ServiceBus", "{8DF9C2D3-F42C-4075-9B7B-D9E14B107867}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebApi", "WebApi", "{2330CA9F-51EF-4CD1-9912-E9EF87E37E64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cqrs.Arch.WebApi", "Cqrs.Arch.WebApi\Cqrs.Arch.WebApi.csproj", "{639151C3-2840-474D-9ED1-AA51AE3185D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cqrs.Arch.Infra.ServiceBus", "Cqrs.Arch.Infra.ServiceBus\Cqrs.Arch.Infra.ServiceBus.csproj", "{39094E03-9802-445D-8571-9E73E9A7C94C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cqrs.Arch.Domain.Core", "Cqrs.Arch.Domain.Core\Cqrs.Arch.Domain.Core.csproj", "{18E4C3DC-15DD-469D-AA31-6403277E5672}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +59,18 @@ Global
 		{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{639151C3-2840-474D-9ED1-AA51AE3185D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{639151C3-2840-474D-9ED1-AA51AE3185D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{639151C3-2840-474D-9ED1-AA51AE3185D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{639151C3-2840-474D-9ED1-AA51AE3185D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39094E03-9802-445D-8571-9E73E9A7C94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39094E03-9802-445D-8571-9E73E9A7C94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39094E03-9802-445D-8571-9E73E9A7C94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39094E03-9802-445D-8571-9E73E9A7C94C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E4C3DC-15DD-469D-AA31-6403277E5672}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +81,9 @@ Global
 		{FADA54A6-C051-48F3-9908-FEE106A32EB5} = {29FD16B2-6043-4A49-B4C4-6748C24A78AE}
 		{D9106D2C-6FE3-4E37-A4D1-B7843F520A6D} = {8D2AF08F-0682-4C50-8534-AF37A718F235}
 		{BC3D8988-AF55-4E4E-AA93-5ADAD1909E5E} = {A1A0D103-C46F-4B24-9547-A614DBE5E598}
+		{639151C3-2840-474D-9ED1-AA51AE3185D8} = {2330CA9F-51EF-4CD1-9912-E9EF87E37E64}
+		{39094E03-9802-445D-8571-9E73E9A7C94C} = {8DF9C2D3-F42C-4075-9B7B-D9E14B107867}
+		{18E4C3DC-15DD-469D-AA31-6403277E5672} = {2462465E-645F-46DF-9BB2-41D0F52CD924}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7CC494CE-05EF-4F9D-866B-1791FD83A3EC}
